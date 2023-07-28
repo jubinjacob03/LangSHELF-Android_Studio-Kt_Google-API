@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+    
+    <ScrollView
+        android:layout_above="@+id/options"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/source"
+                android:background="@drawable/inputborder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/extrabold"
+                android:gravity="center"
+                android:hint="Enter English"
+                android:textAlignment="center"
+                android:minHeight="80dp"
+                android:textSize="20sp">
+            </EditText>
+
+
+            <TextView
+                android:id="@+id/targetlang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp"
+                android:text="">
+            </TextView>
+
+        </LinearLayout>
+        
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_above="@+id/transbtn"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/srclangchoose"
+            android:background="@drawable/button2"
+            android:fontFamily="@font/extrabold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="English"
+            app:cornerRadius="20dp"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:src="@drawable/baseline_arrow_forward_ios_24"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="6.5dp"
+            android:layout_height="wrap_content">
+        </ImageView>
+
+        <Button
+            android:id="@+id/trgtlangchoose"
+            android:background="@drawable/button3"
+            android:fontFamily="@font/extrabold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tamil"
+            app:cornerRadius="20dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/transbtn"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/extrabold"
+        android:background="@drawable/button1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Translate"
+        app:cornerRadius="20dp"/>
+
+
+</RelativeLayout>
