@@ -1,6 +1,7 @@
 package com.example.project
 
 import android.app.ProgressDialog
+import android.content.Intent
 import android.os.Bundle
 import android.os.Message
 import android.util.Log
@@ -35,6 +36,7 @@ class MainActivity : ComponentActivity() {
     private lateinit var srclangchoose: Button
     private lateinit var trgtlangchoose: Button
     private lateinit var transbtn: Button
+    private lateinit var scntxtintent: Button
 
 
     private lateinit var translatorOption: TranslatorOptions
@@ -64,11 +66,18 @@ class MainActivity : ComponentActivity() {
         srclangchoose = findViewById(R.id.srclangchoose)
         trgtlangchoose = findViewById(R.id.trgtlangchoose)
         transbtn = findViewById(R.id.transbtn)
+        scntxtintent = findViewById(R.id.scntxtintent)
 
+        var intentreceivetxt = intent.extras?.getString("Recognizedtextintent")?:" "
+        source.setText(intentreceivetxt.toString())
 
         progressDialog = ProgressDialog(this)
         progressDialog.setTitle("Please wait")
         progressDialog.setCanceledOnTouchOutside(false)
+
+        scntxtintent.setOnClickListener {
+            intenscn()
+        }
 
         loadAvailableLanguages()
 
@@ -84,6 +93,11 @@ class MainActivity : ComponentActivity() {
             validateData()
         }
 
+    }
+
+    private fun intenscn() {
+        var nextpage = Intent(this@MainActivity,MainActivity2::class.java)
+        startActivity(nextpage)
     }
 
     private var sourceLanguageText = ""
@@ -228,6 +242,8 @@ class MainActivity : ComponentActivity() {
 
             false
         }
+
+
     }
 
     private fun  showToast(message: String){
