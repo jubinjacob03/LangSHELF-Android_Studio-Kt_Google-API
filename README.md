@@ -15,3 +15,8 @@ LangSHELF is an Android Translator application developed in Android Studio using
 - Continual enhancements and optimizations to improve performance and user satisfaction.
 - Exploration of additional features and functionalities to expand the application's capabilities.
 - Potential integration with other APIs or services to further enrich the translation experience.
+
+> ## License
+
+> [!CAUTION]
+> This application is legally owned by  <b><em>Jubin Jacob ®</em></b> . Any unauthorized use or distribution of this application for commercial purposes is strictly prohibited. User can be held legal responsible for any actions performed using this application.
